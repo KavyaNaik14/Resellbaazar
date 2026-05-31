@@ -11,7 +11,7 @@ function MyChats() {
     axios.get(`http://localhost:9000/myChats/${user._id}`)
       .then(res => setChats(res.data))
       .catch(err => console.log(err));
-  }, []);
+  }, [user._id]);
 
   return (
     <div className="chatListPage">

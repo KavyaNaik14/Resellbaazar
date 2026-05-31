@@ -26,29 +26,23 @@ function ChatPage() {
   }, [user._id]);
 
   //  LOAD MESSAGES
-  // useEffect(() => {
-  //   loadMessages();
-  //   loadChatInfo();
-  // }, [chatId]);
-
   useEffect(() => {
-  loadChatInfo();
-  loadMessages();
-}, [loadChatInfo, loadMessages]);
+    function loadMessages() {
+      axios.get(`http://localhost:9000/getMessages/${chatId}`)
+        .then(res => setMessages(res.data));
+    }
 
-  function loadMessages() {
-    axios.get(`http://localhost:9000/getMessages/${chatId}`)
-      .then(res => setMessages(res.data));
-  }
+    function loadChatInfo() {
+      axios.get(`http://localhost:9000/myChats/${user._id}`)
+        .then(res => {
+          const chat = res.data.find(c => c._id === chatId);
+          setOtherUser(chat?.otherUserName || "User");
+        });
+    }
 
-  //  GET OTHER USER NAME
-  function loadChatInfo() {
-    axios.get(`http://localhost:9000/myChats/${user._id}`)
-      .then(res => {
-        const chat = res.data.find(c => c._id === chatId);
-        setOtherUser(chat?.otherUserName || "User");
-      });
-  }
+    loadMessages();
+    loadChatInfo();
+  }, [chatId, user._id]);
 
   //  SEND
   function sendMessage() {

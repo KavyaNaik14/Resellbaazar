@@ -20,7 +20,7 @@ function Login() {
     if (user) {
       navigate("/Browse");
     }
-  }, []);
+  }, [navigate]);
 
   function handlechange(e) {
     const { name, value } = e.target;

@@ -252,7 +252,7 @@ function Product() {
         <FaHeart
           size={15}
           style={{ marginLeft: "10px", cursor: "pointer" }}
-          color={wishlist.some(i => i._id === item._id) ? "red" : "gray"}
+          color={isWishlisted ? "red" : "gray"}
           onClick={() => toggleWishlist(item)}
         />
       </h3>

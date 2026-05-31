@@ -171,6 +171,7 @@ function Profile() {
 
 
 
+  // eslint-disable-next-line no-unused-vars
   function logout() {
     localStorage.removeItem("user");
     navigate("/login", { replace: true });
@@ -214,6 +215,7 @@ function Profile() {
       .catch(err => console.log(err));
   }
 
+  // eslint-disable-next-line no-unused-vars
   function handleBuy(item) {
     const user = JSON.parse(localStorage.getItem("user"));
 

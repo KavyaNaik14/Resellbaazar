@@ -40,7 +40,7 @@ function ContactUs() {
 
 
 
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert] = useState(false);
 
   // async function handleSubmit(e) {
   //   e.preventDefault();

@@ -7,7 +7,7 @@ import { FaHeart } from "react-icons/fa";
 function Product() {
   const { id } = useParams();
   const [item, setItem] = useState(null);
-  const [chatId, setChatId] = useState(null);
+  const [chatId] = useState(null);
   const [message, setMessage] = useState("");   // ✅ string
   const [messages, setMessages] = useState([]); // ✅ array
   const navigate = useNavigate();

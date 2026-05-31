@@ -9,7 +9,7 @@ function Profile() {
   const [editing, setEditing] = useState(false);
   const [orderCount, setOrderCount] = useState(0);
   const [notifications, setNotifications] = useState([]);
-  const [orders, setOrders] = useState([]);
+  const [, setOrders] = useState([]);
   const [profile, setProfile] = useState({
     name: '',
     email: '',
@@ -288,9 +288,7 @@ function Profile() {
           {editing ? 'Cancel' : ' Edit Profile'}
         </button>
 
-        {/* <button className="logoutBtn" onClick={logout}>
-      Logout
-    </button> */}
+      
       </div>
 
       {/* Edit Form */}
@@ -315,10 +313,7 @@ function Profile() {
               <label>Email</label>
               <input name="email" type="email" value={draft.email} onChange={handleChange} />
             </div>
-            {/* <div className="formGroup">
-              <label>Phone</label>
-              <input name="phone" value={draft.phone} onChange={handleChange} />
-            </div> */}
+            
           </div>
 
           <button type="submit" className="loginBtn">

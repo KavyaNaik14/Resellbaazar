@@ -11,7 +11,7 @@ function Sellitem() {
   const navigate = useNavigate();
 
   const [step, setStep] = useState(1);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
   const [alertMsg, setAlertMsg] = useState("");
 
@@ -180,7 +180,8 @@ function Sellitem() {
 
       formData.append("image", form.UploadedFile);
 
-      const res = await axios.post(
+      // const res = 
+    await axios.post(
         "http://localhost:9000/addItem",
         formData,
         {

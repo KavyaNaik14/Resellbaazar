@@ -26,10 +26,15 @@ function ChatPage() {
   }, [user._id]);
 
   //  LOAD MESSAGES
+  // useEffect(() => {
+  //   loadMessages();
+  //   loadChatInfo();
+  // }, [chatId]);
+
   useEffect(() => {
-    loadMessages();
-    loadChatInfo();
-  }, [chatId]);
+  loadChatInfo();
+  loadMessages();
+}, [loadChatInfo, loadMessages]);
 
   function loadMessages() {
     axios.get(`http://localhost:9000/getMessages/${chatId}`)

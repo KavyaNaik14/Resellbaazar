@@ -243,7 +243,7 @@ function Product() {
           ⚠️ Please login first
         </div>
       )}
-      <img src={`http://localhost:9000/${item.image}`} />
+      <img src={`http://localhost:9000/${item.image}`}  alt={product.title}/>
 
       <h2>{item.itemname}</h2>
       <p>{item.description}</p>

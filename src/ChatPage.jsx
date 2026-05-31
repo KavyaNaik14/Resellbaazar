@@ -83,8 +83,9 @@ function ChatPage() {
             {m.type === "product" && m.product && (
               <div className="bubble">
                 <img
-                  src={`http://localhost:9000/${m.product.image}`}
+                  src={`http://localhost:9000/${m.product.image}` }
                   style={{ width: "100px", borderRadius: "10px" }}
+                  alt="Chat"
                 />
                 <p>{m.product.name}</p>
                 <p>₹{m.product.price}</p>

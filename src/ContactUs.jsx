@@ -42,27 +42,27 @@ function ContactUs() {
 
   const [showAlert, setShowAlert] = useState(false);
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setLoading(true);
+  // async function handleSubmit(e) {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    try {
-      await axios.post("http://localhost:9000/contact", form);
+  //   try {
+  //     await axios.post("http://localhost:9000/contact", form);
 
-      setShowAlert(true); // show alert
+  //     setShowAlert(true); // show alert
 
-      setTimeout(() => {
-        setShowAlert(false); // hide after 3 sec
-      }, 3000);
+  //     setTimeout(() => {
+  //       setShowAlert(false); // hide after 3 sec
+  //     }, 3000);
 
-      setForm({ name: "", email: "", message: "" });
+  //     setForm({ name: "", email: "", message: "" });
 
-    } catch (err) {
-      alert("Error sending message");
-    }
+  //   } catch (err) {
+  //     alert("Error sending message");
+  //   }
 
-    setLoading(false);
-  }
+  //   setLoading(false);
+  // }
 
   return (
     <div className="contactPage">

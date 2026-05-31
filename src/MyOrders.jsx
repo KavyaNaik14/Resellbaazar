@@ -18,7 +18,7 @@ function MyOrders({ setOrderCount }) {
         setOrderCount && setOrderCount(res.data.length);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [setOrderCount]);
 
   return (
     <>

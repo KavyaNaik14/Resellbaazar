@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Wishlist() {
   const navigate = useNavigate();
 
-  const [wishlist] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   // ✅ LOAD FROM LOCAL STORAGE
   useEffect(() => {

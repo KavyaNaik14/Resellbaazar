@@ -139,29 +139,6 @@ Update the MongoDB connection string in your backend configuration file:
 mongoose.connect("your_mongodb_connection_string");
 ```
 
----
-
-## Project Structure
-
-```text
-Online-Items-Buy-Sell-System/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/
-│   ├── routes/
-│   ├── models/
-│   ├── controllers/
-│   ├── uploads/
-│   └── server.js
-│
-└── README.md
-```
-
----
 
 ## Future Enhancements
 

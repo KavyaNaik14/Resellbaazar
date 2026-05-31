@@ -9,7 +9,7 @@ function Profile() {
   const [editing, setEditing] = useState(false);
   const [orderCount, setOrderCount] = useState(0);
   const [notifications, setNotifications] = useState([]);
-  // const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [profile, setProfile] = useState({
     name: '',
     email: '',
